@@ -601,7 +601,20 @@
             padding: 0;
         }
 
-    </style>
+    @media (max-width: 500px) {
+  .fc .fc-button-group {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+  .fc .fc-button-group .fc-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+}
+</style>
 </head>
 <body>
     <nav class="navbar">
