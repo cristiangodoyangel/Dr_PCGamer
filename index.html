@@ -116,7 +116,6 @@
             color: white;
         }
 
-        /* Estilos del calendario */
         .fc {
             background-color: var(--white);
             border-radius: 15px;
@@ -172,7 +171,7 @@
             font-weight: bold !important;
             text-transform: capitalize !important;
         }
-        /* Más separación entre botones prev y next del calendario */
+       
         .fc .fc-prev-button, .fc .fc-next-button {
             margin: 0 2px !important;
         }
@@ -257,7 +256,6 @@
             box-sizing: border-box;
         }
 
-        /* Espaciado entre botones y borde superior del calendario */
         .fc-header-toolbar, .fc-toolbar {
             padding-top: 8px;
             padding-left: 8px;
@@ -277,7 +275,6 @@
             margin-bottom: 4px;
         }
 
-        /* --- Mejora visual de los días del calendario --- */
         .fc .fc-col-header-cell {
             background: var(--primary-color) !important;
             color: #fff !important;
@@ -321,7 +318,6 @@
             color: #b0b0b0 !important;
         }
 
-        /* --- Mejora visual de la vista Día (timeGridDay) --- */
         .fc .fc-timegrid-col-header-cell {
             background: var(--primary-color) !important;
             color: #fff !important;
@@ -357,48 +353,17 @@
         }
 
         @media (max-width: 768px) {
-            /* Logos más pequeños 
-            .logo-img-left, .logo-img-right {
-                max-width: 60px !important;
-                height: 24px !important;
-                object-fit: contain !important;
-            }
-            /* Botones más pequeños 
-            .fc-button, .btn, .time-slot-btn {
-                font-size: 0.80em !important;
-                padding: 3px 8px !important;
-                min-width: 28px !important;
-                border-radius: 0.25rem !important;
-            }
-        
-            /* Logo más pequeño en tablets y móviles 
-            .navbar-brand img {
-                height: 70px;
-                max-width: 110px;
-            }
-            /* Botones más pequeños 
-            .btn, .time-slot-btn {
-                font-size: 0.85em;
-                padding: 4px 10px;
-                min-width: 40px;
-                border-radius: 0.3rem;
-            }
-            /* Logo más pequeño en tablets y móviles 
-            .navbar-brand img {
-                height: 60px;
-                max-width: 50px;
-            }
-    /* Botones de navegación del calendario uno bajo otro */
-    .fc .fc-button-group {
+           
+        .fc .fc-button-group {
         display: flex;
         flex-direction: column !important;
         gap: 8px;
         width: 100%;
-    }
-    .fc .fc-button {
+        }
+        .fc .fc-button {
         width: 100%;
         margin-bottom: 0 !important;
-    }
+        }
             #calendar {
                 max-width: 100vw;
                 min-width: 0;
@@ -423,6 +388,15 @@
             .form-select, .form-control {
                 font-size: 1em;
                 padding: 8px 6px;
+                box-sizing: border-box;
+            }
+            @media (max-width: 700px) {
+                .form-select {
+                    width: 89vw !important;
+                    max-width: 100vw !important;
+                    min-width: 0 !important;
+                    margin-left: -8px !important; /* adjust if needed for padding */
+                }
             }
             .time-slot-btn {
                 min-width: 60px;
@@ -437,31 +411,19 @@
                 height: 18px !important;
                 object-fit: contain !important;
             }
-            /* Botones aún más pequeños 
-            .fc-button, .btn, .time-slot-btn {
-                font-size: 0.65em !important;
-                padding: 2px 6px !important;
-                min-width: 20px !important;
-                border-radius: 0.20rem !important;
-            }
-        
-            /* Logo aún más pequeño en móviles pequeños */
+           
             .navbar-brand img {
                 height: 40px;
                 max-width: 70px;
             }
-            /* Botones aún más pequeños */
+           
             .btn, .time-slot-btn {
                 font-size: 0.75em;
                 padding: 2px 8px;
                 min-width: 22px;
                 border-radius: 0.15rem;
             }
-            /* Logo aún más pequeño en móviles pequeños 
-            .navbar-brand img {
-                height: 60px;
-                max-width: 100px;
-            }*/
+        
             html, body {
                 font-size: 15px;
                 max-width: 100vw;
@@ -471,7 +433,6 @@
                 font-size: 1.1em !important;
                 padding: 0 2px;
             }
-            /* Remove redundant larger logo size for mobile */
             .client-form-container, .time-slots-container {
                 padding: 4px;
             }
@@ -495,7 +456,63 @@
                 padding: 4px 0;
             }
         }
-        @media (max-width: 500px) {
+        @media (max-width: 700px) {
+    .modal-header, .modal-title, .modal-body, .modal-footer, .client-form-container, .time-slots-container, .form-label, .form-control, .time-slots-title {
+        font-size: 1em !important;
+    }
+
+    /* ...otros estilos... */
+    .fc .fc-button-group {
+        flex-direction: row !important;
+        display: flex !important;
+        gap: 8px !important;
+        width: auto !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+
+    html, body {
+        font-size: 1.1rem !important;
+    }
+    h1, h2, h3, h4, h5, h6, .main-title, .modal-title, .time-slots-title {
+        font-size: 1.3em !important;
+    }
+    .form-label, .form-control, .modal-header, .modal-body, .modal-footer, .client-form-container, .time-slots-container {
+        font-size: 1.1em !important;
+    }
+    .time-slot-btn {
+        font-size: 1.8em !important;
+        padding: 18px 0 !important;
+        min-width: 98vw !important;
+        width: 10vw !important;
+        min-height: 60px !important;
+        border-radius: 1.2rem !important;
+        margin: 12px auto !important;
+        display: block !important;
+        background: #15a7b6 !important;
+        color: #fff !important;
+        border: 2px solid #15a7b6 !important;
+        box-shadow: 0 2px 10px rgba(21,167,182,0.12);
+    }
+    .btn, .fc-button {
+        font-size: 1.15em !important;
+        min-height: 48px !important;
+        padding: 12px 20px !important;
+    }
+    .logo-img-left, .logo-img-right {
+        max-width: 90px !important;
+        height: 20px !important;
+    }
+
+    .time-slot-btn {
+        font-size: 3.5em !important;
+        padding: 18px 32px !important;
+        min-width: 70px !important;
+        min-height: 68px !important;
+        border-radius: 0.7rem !important;
+        margin: 8px 4px !important;
+    }
+
             .logo-img-left, .logo-img-right {
                 max-width: 92px !important;
                 height: 14px !important;
@@ -522,33 +539,7 @@
                 padding: 6px;
             }
         }
-       /* @media (max-width: 500px) {
-            .logo-bar {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                justify-content: center !important;
-                gap: 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-            }
-            .logo-left, .logo-right {
-                width: 100% !important;
-                justify-content: center !important;
-                align-items: center !important;
-                display: flex !important;
-            }
-            .logo-img-left, .logo-img-right {
-                width: 100% !important;
-                max-width: 220px !important;
-                height: auto !important;
-                margin: 0 auto !important;
-                padding: 0 !important;
-                display: block !important;
-            }
-        }
-
-        /* Footer */
+      
         .footer {
             text-align: center;
             padding: 20px;
